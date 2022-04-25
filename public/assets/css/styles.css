@@ -1,26 +1,7 @@
-nav {
-	font-size: 20px;
-}
-#navbar {
-	width: 100%;
-	/* border: 2px solid red; */
-	font-size: 20px;
-	margin-bottom: 12px;
-	background-color: #062f4d;
-	color: #c2c2c4;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	padding: 8px 4px;
-	font-size: 24px;
-}
-#navbar a {
-	color: #c2c2c4;
-	text-decoration: none;
-}
-#nav-buttons,
-#nav-login {
-	display: flex;
-	flex-wrap: wrap;
-	column-gap: 2em;
+body {
+	margin: 0;
+	padding: 10px;
+	height: 100%;
+	background-color: #1b4c6d;
+	color: #C2C2C4;
 }

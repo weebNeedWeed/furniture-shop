@@ -1,39 +1,40 @@
 const headerTemplate = document.createElement("template");
 
 headerTemplate.innerHTML = `
+  <style>
+    .nav-bar-buttons > * {
+      margin-right: 10px;
+      border: none;
+      color: #6c757d;
+      background-color: #212529;
+      font-size: 14px;
+      font-family: Roboto;
+    }
+  </style>
+
   <header>
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
       <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="./home/home.html">Furnitures Shop</a>
+        <a class="navbar-brand" href="./home.html">Furnitures Shop</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./cart.html">Cart</a>
+            </li>
+          </ul>
+          <div class="d-flex nav-bar-buttons">
+            <a href="./login.html"><i class="fa fa-key"> Login</i></a>
+            <a href="./signup.html"><i class="fa fa-user"> Sign - up</i></a>
+          </div>
         </div>
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="./home/home.html">Home</a></li>
-          <li><a href="./cart.html">Cart</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="./signup/signup.html"><span class="fa fa-user"></span> Sign Up</a></li>
-          <li><a href="./login/login.html"><span class="fa fa-key"></span> Login</a></li>
-        </ul>
       </div>
     </nav>
-    <!-- <div id="navbar">
-      <div id="nav-title">
-        <a href="#">Furnitures Shop</a>
-      </div>
-      <div id="nav-buttons">
-        <a href="#">Home</a>
-        <a href="#">Cart</a>
-      </div>
-      <div id="nav-login">
-        <a href="#">Sign-Up</a>
-        <a href="#">Login</a>
-      </div> -->
-      <!-- <a class="float-left" href="#">Home</a>
-      <a class="float-left" href="#">Cart</a>
-      <a class="float-right" href="#">Login</a>
-      <a class="float-right" href="#">Sign-up</a> -->
-    </div>
   </header>
 `;
 

@@ -1,11 +1,3 @@
-body {
-	margin: 0;
-	padding: 10px;
-	height: 100%;
-	background-color: #1b4c6d;
-	color: #c2c2c4;
-}
-
 #canvas {
 	width: 100%;
 }
@@ -17,6 +9,7 @@ body {
 	/* border: 2px solid green; */
 	padding: 10px;
 	padding-top: 0px;
+	width: 60%;
 }
 
 #scene-container {
@@ -68,7 +61,7 @@ body {
 }
 
 #search-container {
-	height: 30px;
+	height: 50px;
 	/* border: 2px solid red; */
 	padding: 8px;
 	margin-bottom: 10px;
@@ -92,27 +85,44 @@ body {
 	margin-bottom: 12px;
 }
 
-.search-form {
+#search-form {
 	border: 2px solid #c2c2c4;
 	/* border-radius: 4px; */
 	background-color: #062f4d;
 	color: #c2c2c4;
+	width: 20%;
 }
 
-.search-form button {
+#search-form button {
 	float: right;
+	width: 20%;
 	background: #ddd;
 	font-size: 17px;
 	border: none;
 	height: 100%;
 	cursor: pointer;
+	background-color: #062f4d;
+	color: #c2c2c4;
 }
 
-.search-form input {
+#search-form input {
 	height: 96%;
+	width: 80%;
 	border: none;
 	background-color: #062f4d;
 	color: #838997;
+}
+
+#search-form input:focus {
+	border: none;
+	box-shadow: none;
+	outline: none;
+}
+
+.item-buttons > *, .texture-buttons > * {
+	color: #c2c2c4;
+	border: none;
+	background-color: #062f4d;
 }
 
 .item-buttons,

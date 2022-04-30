@@ -1,7 +1,47 @@
-body {
-	margin: 0;
+main {
+	display: flex;
+	justify-content: center;
 	padding: 10px;
+}
+
+.cart-list-container {
+	display: block;
+	width: 80%;
 	height: 100%;
-	background-color: #1b4c6d;
-	color: #c2c2c4;
+	border: 2px solid red;
+	padding: 10px;
+}
+
+
+.card-item {
+	width: 100%;
+	display: inline-flex;
+	justify-content: space-around;
+	border: 2px solid green;
+	margin-bottom: 12px;
+}
+
+
+.item-image {
+	background-color: red;
+	width: 40%;
+	height: 100%;
+	height: 240px;
+}
+
+
+.price-tag {
+	width: 60%;
+}
+
+
+.amount-container {
+	display: flex;
+	justify-content: center;
+	padding: 100px 0;
+}
+
+
+.item-amount {
+	width: 24%;
 }

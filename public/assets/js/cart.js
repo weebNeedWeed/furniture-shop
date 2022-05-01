@@ -24,7 +24,6 @@ function createItem(item_name) {
   return item;
 }
 
-
 cart_list_container = document.getElementsByClassName("cart-list-container")[0];
 
 for (var i = 0; i < localStorage.length; i++) {

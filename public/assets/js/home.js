@@ -1,6 +1,18 @@
 item_list = document.getElementById("list");
 localStorage.clear();
 
+function setLoadingStatus(status) {
+	if (status === "show") {
+		$("#scene-container").html(`<div id="loading">
+            <span id="loading-icon">
+              <i class="fa-solid fa-spinner"></i>
+            </span>
+          </div>`);
+	} else if (status === "hide") {
+		$("#loading").remove();
+	}
+}
+
 function loadModel(path, config, lightColor) {
 	const sceneWrapper = document.getElementById("scene-container");
 
@@ -21,6 +33,9 @@ function loadModel(path, config, lightColor) {
 	renderer.setClearColor(0xffffff);
 
 	sceneWrapper.innerHTML = "";
+
+	setLoadingStatus("show");
+
 	sceneWrapper.appendChild(renderer.domElement);
 
 	const controls = new THREE.OrbitControls(camera, renderer.domElement);
@@ -43,6 +58,8 @@ function loadModel(path, config, lightColor) {
 			controls.update();
 
 			scene.add(gltf.scene);
+
+			setTimeout(() => setLoadingStatus("hide"), 1000);
 		},
 		undefined,
 		function (error) {
@@ -125,6 +142,7 @@ function createCard(item_name) {
 	upload_button.onclick = () => {
 		const textureWrapper = document.getElementById("textures-container");
 		textureWrapper.innerHTML = "";
+
 		// Generate textures card
 		shopItem.texture.forEach((color) => {
 			const newTextureCard = document.createElement("div");
@@ -180,3 +198,6 @@ function createCard(item_name) {
 
 item_list.appendChild(createCard("Sofa"));
 item_list.appendChild(createCard("Office chair"));
+
+// Click button to load model when user redirecting to home
+$("#Sofa button:first-child").click();

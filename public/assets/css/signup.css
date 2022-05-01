@@ -1,0 +1,87 @@
+:root {
+    --dark:  #1B4C6D;
+    --blue: #062F4D;
+    --silver1: #C2C2C4;
+    --silver2: #A3A5AE;
+    --silver3: #838997;
+}
+main {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+main h3 {
+    font-weight: bold;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 10px;
+}
+
+.form-container .form-signup {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #c2c2c4;
+    border-radius: 20px;
+    border-image: linear-gradient(45deg, var(--blue), var(--dark), var(--silver1, var(--silver2), var(--silver3)));
+    border-image-slice: 1;
+    width: 520px;
+    height: 410px;
+    padding: 20px 15px;
+    margin-top: 50px;
+}
+
+.user {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 500px;
+    min-height: 242px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-bottom: 12px;
+    background-image: linear-gradient(to right, #1b4c6d, #062f4d);
+    border-radius: 20px;
+    border: 2px solid #c2c2c4;
+    color: #c2c2c4;
+    height: 40px;
+    width: 205px;
+}
+
+::placeholder {
+    padding-left: 10px;
+}
+
+.submit {
+    width: 100%;
+    height:  40px;
+    margin-top: 10px;
+}
+
+.submit:hover {
+    background-image: linear-gradient(to right, #838997, #838997);
+}
+
+p {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+    top: 20px;
+}
+
+.form-container a {
+    text-decoration: none;
+    color: var(--silver1);
+}
+
+.form-container a:hover {
+    color: var(--silver3);
+}

@@ -17,15 +17,30 @@
 
     <main>
       <aside id="texture-list">
-        <h3 class="header">Textures</h3>
+        <h3 class="header">Nền</h3>
         <div id="textures-container">
         </div>
       </aside>
       <div id="container">
-        <h3 class="header">Preview Scene</h3>
+        <h3 class="header">Xem trước</h3>
         <div id="scene-container">
         </div>
-        <h3 class="header">Furnitures</h3>
+
+        <h3 class="header">Thông tin sản phẩm</h3>
+        <div id="info-box">
+          <p class="product-info-wrapper">Tên: <span id="product-name">Sofa</span></p>
+          <p class="product-info-wrapper">Mô tả: <span id="product-des">đasa</span></p>
+          <p class="product-info-wrapper">Giá: <span id="product-price">24.000</span> VND</p>
+
+          <div class="d-flex justify-content-end">
+            <button type="button" id="info-box-btn" class="btn btn-primary">
+              Add to cart <i class="fa fa-cart-plus"></i>
+            </button>
+          </div>
+
+        </div>
+
+        <h3 class="header">Danh sách sản phẩm</h3>
         <div id="item-list">
           <div id="search-container">
             <form id="search-form" action="index.html" method="post">
@@ -45,7 +60,7 @@
     </main>
 
     <div id="ads-box">
-      <p id="ads-text">Ưu đãi giảm giá 15% chỉ duy nhất trong hôm nay</p>
+      <p id="ads-text">Ưu đãi giảm giá 15% toàn bộ sản phẩm chỉ duy nhất trong hôm nay</p>
     </div>
 
     <footer-component></footer-component>

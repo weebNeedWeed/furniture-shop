@@ -12,7 +12,7 @@ function setLoadingStatus(status) {
 	}
 }
 
-function loadModel(path, config, lightColor) {
+function loadModel(path, config, backgroundColor) {
 	const sceneWrapper = document.getElementById("scene-container");
 
 	const width = sceneWrapper.offsetWidth;
@@ -29,7 +29,7 @@ function loadModel(path, config, lightColor) {
 	const renderer = new THREE.WebGLRenderer({ antialias: true });
 	renderer.setSize(width, height);
 
-	renderer.setClearColor(0xffffff);
+	renderer.setClearColor(backgroundColor);
 
 	sceneWrapper.innerHTML = "";
 
@@ -69,8 +69,11 @@ function loadModel(path, config, lightColor) {
 	// const light = new THREE.AmbientLight(0x00ff55, 10); // soft white light
 	// scene.add(light);
 
+	const lightColor = 0xffffff;
+	const cuongDoSang = 2;
+
 	// front to back
-	const light1 = new THREE.DirectionalLight(lightColor, 5);
+	const light1 = new THREE.DirectionalLight(lightColor, cuongDoSang);
 
 	light1.position.set(0, 0, 10);
 	light1.target.position.set(0, 0, 0);
@@ -78,7 +81,7 @@ function loadModel(path, config, lightColor) {
 	scene.add(light1);
 
 	// top to bottom (y)
-	const light2 = new THREE.DirectionalLight(lightColor, 5);
+	const light2 = new THREE.DirectionalLight(lightColor, cuongDoSang);
 
 	light2.position.set(0, 10, 0);
 	light2.target.position.set(0, 0, 0);
@@ -86,7 +89,7 @@ function loadModel(path, config, lightColor) {
 	scene.add(light2);
 
 	// right to left
-	const light3 = new THREE.DirectionalLight(lightColor, 5);
+	const light3 = new THREE.DirectionalLight(lightColor, cuongDoSang);
 
 	light3.position.set(10, 0, 0);
 	light3.target.position.set(0, 0, 0);
@@ -94,7 +97,7 @@ function loadModel(path, config, lightColor) {
 	scene.add(light3);
 
 	// left to right
-	const light4 = new THREE.DirectionalLight(lightColor, 5);
+	const light4 = new THREE.DirectionalLight(lightColor, cuongDoSang);
 
 	light4.position.set(-10, 0, 0);
 	light4.target.position.set(0, 0, 0);
@@ -102,7 +105,7 @@ function loadModel(path, config, lightColor) {
 	scene.add(light4);
 
 	// back to front
-	const light5 = new THREE.DirectionalLight(lightColor, 5);
+	const light5 = new THREE.DirectionalLight(lightColor, cuongDoSang);
 
 	light5.position.set(0, 0, -10);
 	light5.target.position.set(0, 0, 0);
@@ -170,6 +173,16 @@ function createCard(item_name) {
 		});
 
 		loadModel(shopItem.modelFolder, shopItem.config, shopItem.texture[0]);
+
+		// load product's info
+		document.getElementById("product-name").innerText = shopItem.vietnameseName;
+		document.getElementById("product-price").innerText = shopItem.price;
+		document.getElementById("product-des").innerText = shopItem.description;
+
+		// handle user click btn in infobox
+		document.getElementById("info-box-btn").onclick = () => {
+			console.log(shopItem.name);
+		};
 	};
 
 	let add_cart_button = document.createElement("button");
@@ -195,14 +208,10 @@ function createCard(item_name) {
 	return card;
 }
 
-item_list.appendChild(createCard("Sofa"));
-item_list.appendChild(createCard("Office chair"));
-item_list.appendChild(createCard("Office chair"));
-item_list.appendChild(createCard("Office chair"));
-item_list.appendChild(createCard("Office chair"));
-item_list.appendChild(createCard("Office chair"));
-item_list.appendChild(createCard("Office chair"));
-item_list.appendChild(createCard("Office chair"));
+// item_list.appendChild(createCard("Sofa"));
+SHOPITEMS.forEach((item) => {
+	item_list.appendChild(createCard(item.name));
+});
 
 // Click button to load model when user redirecting to home
 $("#Sofa button:first-child").click();

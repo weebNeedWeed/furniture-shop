@@ -5,7 +5,6 @@ function setLoadingStatus(status) {
 	if (status === "show") {
 		$("#scene-container").html(`<div id="loading">
             <span id="loading-icon">
-              <i class="fa-solid fa-spinner"></i>
             </span>
           </div>`);
 	} else if (status === "hide") {
@@ -59,7 +58,7 @@ function loadModel(path, config, lightColor) {
 
 			scene.add(gltf.scene);
 
-			setTimeout(() => setLoadingStatus("hide"), 1000);
+			setTimeout(() => setLoadingStatus("hide"), 2000);
 		},
 		undefined,
 		function (error) {
@@ -198,6 +197,29 @@ function createCard(item_name) {
 
 item_list.appendChild(createCard("Sofa"));
 item_list.appendChild(createCard("Office chair"));
+item_list.appendChild(createCard("Office chair"));
+item_list.appendChild(createCard("Office chair"));
+item_list.appendChild(createCard("Office chair"));
+item_list.appendChild(createCard("Office chair"));
+item_list.appendChild(createCard("Office chair"));
+item_list.appendChild(createCard("Office chair"));
 
 // Click button to load model when user redirecting to home
 $("#Sofa button:first-child").click();
+
+// Ads logic
+const adsText = $("#ads-text");
+const adsBox = $("#ads-box");
+
+const defaultTop = adsBox.height();
+
+let offsetTop = defaultTop;
+setInterval(() => {
+	adsText.css("top", offsetTop + "px");
+
+	offsetTop = offsetTop - 1;
+
+	if (offsetTop === 0 - adsText.height()) {
+		offsetTop = defaultTop;
+	}
+}, 10);

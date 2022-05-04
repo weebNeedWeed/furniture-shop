@@ -84,3 +84,53 @@ p {
 .form-container a:hover {
     color: var(--silver3);
 }
+
+/* scroll bar design */
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--silver1)
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--silver3);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+
+@media (max-width: 510px) {
+    .form-container {
+        max-width: 100%;
+    }
+    .form-container .form-signup {
+        width: 100%;
+        height: 100%;
+    }
+
+    .form-container .input {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .form-container input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 310px) {
+    .user {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    .user::-webkit-scrollbar {
+        width: 0;
+    }
+}

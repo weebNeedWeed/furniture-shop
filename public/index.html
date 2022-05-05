@@ -4,74 +4,44 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ</title>
+    <title>Giỏ hàng</title>
 
     <link rel="stylesheet" href="./assets/lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/lib/fontawesome/css/all.css">
-    <link rel="stylesheet" href="./assets/css/home.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
   </head>
 
   <body>
     <header-component></header-component>
 
     <main>
-      <aside id="texture-list">
-        <h3 class="header">Nền</h3>
-        <div id="textures-container">
-        </div>
-      </aside>
-      <div id="container">
-        <h3 class="header">Xem trước</h3>
-        <div id="scene-container">
-        </div>
-
-        <h3 class="header">Thông tin sản phẩm</h3>
-        <div id="info-box">
-          <p class="product-info-wrapper">Tên: <span id="product-name">Sofa</span></p>
-          <p class="product-info-wrapper">Mô tả: <span id="product-des">đasa</span></p>
-          <p class="product-info-wrapper">Giá: <span id="product-price">24.000</span> VND</p>
-
-          <div class="d-flex justify-content-end">
-            <button type="button" id="info-box-btn" class="btn btn-primary">
-              Add to cart <i class="fa fa-cart-plus"></i>
-            </button>
+      <div class="main-menu-container image">
+        <img class="main-menu-image" src="./assets/images/miscellaneous/main_menu_image.jpg" alt="">
+        <div class="rooms rooms-padding">
+          <div class="living-room-image image">
+            <img src="./assets/images/miscellaneous/living_room_image.jpg" alt="">
+            <label>Living Room</label>
           </div>
-
-        </div>
-
-        <h3 class="header">Danh sách sản phẩm</h3>
-        <div id="item-list">
-          <div id="search-container">
-            <form id="search-form" action="index.html" method="post">
-              <input type="text" name="" value="">
-              <button type="submit" class="fa fa-search">
-            </form>
-          </div>
-          <div id="list">
-          </div>
-          <div id="page-number">
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
+          <div class="side-rooms">
+            <div class="bedroom-image image">
+              <img src="./assets/images/miscellaneous/bedroom_image.jpg" alt>
+              <label>BedRoom</label>
+            </div>
+            <div class="kitchen-image image">
+              <img src="./assets/images/miscellaneous/kitchen_image.jpg" alt="">
+              <label>Kitchen</label>
+            </div>
           </div>
         </div>
       </div>
     </main>
 
-    <div id="ads-box">
-      <p id="ads-text">Ưu đãi giảm giá 15% toàn bộ sản phẩm chỉ duy nhất trong hôm nay</p>
-    </div>
-
     <footer-component></footer-component>
 
     <script src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
     <script src="./assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/lib/three/three.min.js"></script>
-    <script src="./assets/lib/three/GLTFLoader.js"></script>
-    <script src="./assets/lib/three/OrbitControls.js"></script>
     <script src="./assets/js/scripts.js"></script>
-    <script src="./assets/js/home.js"></script>
     <script src="./assets/js/components/Header.js"></script>
     <script src="./assets/js/components/Footer.js"></script>
 

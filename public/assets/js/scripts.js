@@ -9,6 +9,18 @@ const hexToRGB = (hex) => {
 	return rgb;
 };
 
+const debounce = function (fn, time = 300) {
+	let timer;
+
+	return (...args) => {
+		clearTimeout(timer);
+
+		timer = setTimeout(() => {
+			fn.apply(this, args);
+		}, time);
+	};
+};
+
 const SHOPITEMS = [
 	{
 		name: "Sofa",
@@ -92,3 +104,7 @@ const SHOPITEMS = [
 		texture: [0xffffff],
 	},
 ];
+
+SHOPITEMS.forEach(
+	(elm) => (elm.texture = [0xa5d4dc, 0xf7f7f7, 0xebd2d1, 0xcaabbf]),
+);

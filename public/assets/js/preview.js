@@ -213,6 +213,60 @@ SHOPITEMS.forEach((item) => {
 	item_list.appendChild(createCard(item.name));
 });
 
+// Generate page number;
+const generatePageNumber = (itemsArray) => {
+	const itemPerPage = 6;
+
+	const itemCount = itemsArray.length;
+	const pageCount = Math.ceil(itemCount / itemPerPage);
+
+	const pageNumberBox = document.getElementById("page-number");
+
+	pageNumberBox.innerHTML = "";
+
+	for (let index = 0; index < pageCount; ++index) {
+		const button = document.createElement("button");
+		button.innerText = index + 1;
+
+		button.onclick = () => {
+			let from = index * itemPerPage;
+			let to = from + itemPerPage - 1;
+
+			if (to > itemCount - 1) {
+				to = itemCount - 1;
+			}
+
+			item_list.innerHTML = "";
+
+			for (let index = from; index <= to; ++index) {
+				item_list.appendChild(createCard(SHOPITEMS[index].name));
+			}
+		};
+
+		pageNumberBox.appendChild(button);
+	}
+};
+
+generatePageNumber(SHOPITEMS);
+
+// Search logic
+const searchInput = document.getElementById("search");
+searchInput.onkeyup = debounce(() => {
+	const value = searchInput.value;
+
+	const filteredShopItems = SHOPITEMS.filter((elm) =>
+		elm.name.toLowerCase().includes(value.toLowerCase()),
+	);
+
+	item_list.innerHTML = "";
+
+	filteredShopItems.forEach((item) => {
+		item_list.appendChild(createCard(item.name));
+	});
+
+	generatePageNumber(filteredShopItems);
+}, 300);
+
 // Click button to load model when user redirecting to home
 $("#Sofa button:first-child").click();
 

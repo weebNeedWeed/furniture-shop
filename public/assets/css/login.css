@@ -1,68 +1,156 @@
-.login-form {
-	text-align: center;
-	border: 2px solid #c2c2c4;
-	border-radius: 20px;
-	width: 20%;
-	padding: 20px;
-	margin-top: 10%;
+:root {
+	--dark: #1b4c6d;
+	--blue: #062f4d;
+	--silver1: #c2c2c4;
+	--silver2: #a3a5ae;
+	--silver3: #838997;
+}
+main {
+	text-decoration: none;
 }
 
-.login-form input {
-	height: 40px;
-	padding: 0;
-	border: none;
-	margin-bottom: 12px;
-	background-image: linear-gradient(to right, #1b4c6d, #062f4d);
-	border-radius: 20px;
-	border: 2px solid #c2c2c4;
-	width: 80%;
-	transition: width 0.5s;
+main h3 {
+	text-align: left;
+	font-size: 30px;
 	color: #c2c2c4;
-	font-size: 20px;
-}
-
-.login-form input:hover {
-	width: 100%;
-}
-
-.login-form h3 {
-	margin: 0;
-}
-
-.login-form button {
-	width: 60%;
-	margin-top: 12px;
-	border: 2px solid #c2c2c4;
-	border-radius: 20px;
-	height: 40px;
-	padding-bottom: 40px;
-	/* background-color: #062F4D; */
-	background-image: linear-gradient(to right, #1b4c6d, #062f4d);
-	color: #c2c2c4;
-	font-size: 24px;
-}
-
-.login-form button:hover {
-	cursor: pointer;
-	background-image: linear-gradient(to right, #838997, #838997);
+	font-weight: bold;
 }
 
 .form-container {
 	display: flex;
 	justify-content: center;
-	font-size: 24px;
+	margin: 20px 10px;
 }
 
-.other-accounts {
-	width: 30%;
-	display: inline-flex;
+.form-container .form-signup {
+	display: flex;
+	flex-direction: column;
+	border: 2px solid #c2c2c4;
+	border-radius: 20px;
+	border-image: linear-gradient(
+		45deg,
+		var(--blue),
+		var(--dark),
+		var(--silver1, var(--silver2), var(--silver3))
+	);
+	border-image-slice: 1;
+	width: 520px;
+	padding: 20px 15px;
+	margin-top: 50px;
+	padding-bottom: 40px;
+}
+
+.user {
+	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
+	max-width: 500px;
+	min-height: 242px;
+	padding: 10px;
 }
 
-.other-accounts i {
-	margin-left: 10px;
-	text-align: center;
-	border: none;
+.input {
 	color: #c2c2c4;
+	text-align: center;
+}
+
+input {
+	margin-bottom: 12px;
+	background-image: linear-gradient(to right, #1b4c6d, #062f4d);
+	border-radius: 20px;
+	border: 2px solid #c2c2c4;
+	color: #c2c2c4;
+	height: 40px;
+	width: 205px;
+}
+
+::placeholder {
+	padding-left: 10px;
+}
+
+.submit {
+	width: 100%;
+	height: 40px;
+	margin-top: 10px;
+}
+
+.submit:hover {
+	background-image: linear-gradient(to right, #838997, #838997);
+}
+
+p {
+	position: relative;
+	text-align: center;
+	top: 20px;
+	margin-bottom: 0;
+}
+
+.form-container a {
 	text-decoration: none;
+	color: var(--silver1);
+}
+
+.form-container a:hover {
+	color: var(--silver3);
+}
+
+/* scroll bar design */
+/* width */
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: var(--silver1);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: var(--silver3);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+.name,
+.pass {
+	display: block;
+	width: 100%;
+	text-align: left;
+}
+
+.form-container input {
+	display: block;
+	width: 100%;
+}
+
+@media (max-width: 510px) {
+	.form-container {
+		max-width: 100%;
+	}
+	.form-container .form-signup {
+		width: 100%;
+		height: 100%;
+	}
+
+	.form-container .input {
+		margin-bottom: 15px;
+		width: 100%;
+	}
+	.form-container input {
+		width: 100%;
+	}
+}
+
+@media (max-width: 310px) {
+	.user {
+		max-height: 300px;
+		overflow-y: scroll;
+	}
+	.user::-webkit-scrollbar {
+		width: 0;
+	}
 }

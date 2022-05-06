@@ -23,17 +23,34 @@
           <div class="cart-total">
             <p>
               <span>Tổng tiền</span>
-              <span>VND</span>
+              <span class="amounts">VND</span>
             </p>
             <p>
               <span>Số lượng</span>
-              <span>2</span>
+              <span class="amount-items">2</span>
             </p>
-            <a href="#">Thanh toán</a>
+            <a id="thanhtoan" style="cursor: pointer;">Thanh toán</a>
           </div>
         </div>
       </div>
     </main>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel" style="color: black;">Thông báo</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" style="color: black" id="modal-body">
+            Thanh toán thành công
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <footer-component></footer-component>
 

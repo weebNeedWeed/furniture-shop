@@ -240,7 +240,7 @@ body {
 #ads-box {
 	position: fixed;
 	right: 20px;
-	top: 12%;
+	top: 8%;
 	width: 140px;
 	height: 500px;
 	background-color: rgba(255, 255, 255, 0.8);
@@ -253,6 +253,7 @@ body {
 	animation-iteration-count: infinite;
 	overflow: hidden;
 	padding: 5px;
+	transition: all 0.1s;
 }
 #ads-text {
 	position: absolute;

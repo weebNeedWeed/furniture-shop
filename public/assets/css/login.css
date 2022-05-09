@@ -94,27 +94,6 @@ p {
 	color: var(--silver3);
 }
 
-/* scroll bar design */
-/* width */
-::-webkit-scrollbar {
-	width: 5px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-	background: var(--silver1);
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-	background: var(--silver3);
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-	background: #555;
-}
-
 .name,
 .pass {
 	display: block;

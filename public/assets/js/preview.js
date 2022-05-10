@@ -289,9 +289,8 @@ setInterval(() => {
 
 // Check if user scrolled to bottom, set top of ads to 0%
 window.onscroll = function () {
-	console.log(11);
 	if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-		adsBox.css("top", "0%");
+		adsBox.css("top", "-5%");
 	} else {
 		adsBox.css("top", "10%");
 	}

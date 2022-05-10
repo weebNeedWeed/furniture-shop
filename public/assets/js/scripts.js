@@ -21,6 +21,15 @@ const debounce = function (fn, time = 300) {
 	};
 };
 
+const formatVND = (number) => {
+	const formatted = Intl.NumberFormat("vi-VN", {
+		style: "currency",
+		currency: "VND",
+	}).format(number);
+
+	return formatted.substring(0, formatted.length - 2);
+};
+
 const SHOPITEMS = [
 	{
 		name: "Sofa",

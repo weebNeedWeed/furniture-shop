@@ -140,7 +140,7 @@ function createCard(item_name) {
 	cardInfo.className = "card-info";
 	cardInfo.innerHTML = `
     <h5>${shopItem.vietnameseName}</h5>
-    <p><span>${shopItem.price}</span> VND</p>
+    <p><span>${formatVND(shopItem.price)}</span> VND</p>
   `;
 
 	let card_buttons = document.createElement("div");
@@ -186,7 +186,9 @@ function createCard(item_name) {
 
 		// load product's info
 		document.getElementById("product-name").innerText = shopItem.vietnameseName;
-		document.getElementById("product-price").innerText = shopItem.price;
+		document.getElementById("product-price").innerText = formatVND(
+			shopItem.price,
+		);
 		document.getElementById("product-des").innerText = shopItem.description;
 	};
 

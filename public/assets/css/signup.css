@@ -53,11 +53,11 @@ main h3 {
 input {
 	margin-bottom: 12px;
 	background-image: linear-gradient(to right, #1b4c6d, #062f4d);
-	border-radius: 20px;
+	border-radius: 4px;
 	border: 2px solid #c2c2c4;
 	color: #c2c2c4;
 	height: 40px;
-	width: 205px;
+	width: 220px;
 }
 
 ::placeholder {

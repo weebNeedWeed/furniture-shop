@@ -4,7 +4,7 @@ footerTemplate.innerHTML = `
   <footer class="footer">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 text-center">
           <a href="/index.html" class="footer__logo">NVM</a>
           <ul class="contact">
             <li class="contact__logo contact__logo--facebook">

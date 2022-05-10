@@ -154,3 +154,8 @@ p {
 		width: 0;
 	}
 }
+
+.modal-h4, .modal-h4 {
+	font-weight: bold;
+	color: var(--silver3);
+}

@@ -19,7 +19,7 @@ function createItem(item_name) {
 
 	let product_price = document.createElement("h4");
 	product_price.className = "product-price";
-	product_price.innerHTML = `Giá tiền: ${shopItem.price} VND`;
+	product_price.innerHTML = `Giá tiền: ${formatVND(shopItem.price)} VND`;
 	sum += shopItem.price;
 
 	let product_quantity = document.createElement("p");
@@ -61,7 +61,7 @@ const loadCart = () => {
 		products.appendChild(createItem(localStorage.key(i)));
 	}
 
-	amounts.innerHTML = `${sum} VND`;
+	amounts.innerHTML = `${formatVND(sum)} VND`;
 };
 
 loadCart();

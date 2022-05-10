@@ -27,12 +27,12 @@ main h3 {
 	flex-direction: column;
 	border: 2px solid #c2c2c4;
 	border-radius: 20px;
-	border-image: linear-gradient(
+	/* border-image: linear-gradient(
 		45deg,
 		var(--blue),
 		var(--dark),
 		var(--silver1, var(--silver2), var(--silver3))
-	);
+	); */
 	border-image-slice: 1;
 	width: 520px;
 	padding: 20px 15px;
@@ -57,7 +57,7 @@ main h3 {
 input {
 	margin-bottom: 12px;
 	background-image: linear-gradient(to right, #1b4c6d, #062f4d);
-	border-radius: 20px;
+	border-radius: 4px;
 	border: 2px solid #c2c2c4;
 	color: #c2c2c4;
 	height: 40px;

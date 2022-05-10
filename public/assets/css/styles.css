@@ -18,7 +18,7 @@ body {
 	font-size: calc(4vw + 4vh + 10px);
 	text-decoration: none;
 	font-weight: bold;
-	display: block;
+	display: inline-block;
 }
 
 .contact {
@@ -68,4 +68,5 @@ body {
 	text-align: center;
 	margin: 0;
 	margin-top: 20px;
+	color: #c2c2c4;
 }

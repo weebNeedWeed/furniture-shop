@@ -40,7 +40,7 @@ function loadModel(path, config, backgroundColor) {
 	const controls = new THREE.OrbitControls(camera, renderer.domElement);
 	controls.autoRotate = true;
 	controls.enablePan = false;
-	controls.enableDamping = true;
+	controls.enableDamping = false;
 	controls.mouseButtons = {
 		MIDDLE: THREE.MOUSE.DOLLY,
 		LEFT: THREE.MOUSE.ROTATE,
@@ -187,8 +187,8 @@ function createCard(item_name) {
 
 	let add_cart_button = document.createElement("button");
 	add_cart_button.onclick = function add_cart(event) {
-		localStorage.setItem("item-" + item_name, 1);
-		console.log("Set Item " + item_name);
+		localStorage.setItem(item_name, 1);
+		// console.log("Set Item " + item_name);
 	};
 
 	// Card Buttons' Icon

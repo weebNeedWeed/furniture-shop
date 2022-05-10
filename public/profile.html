@@ -18,16 +18,40 @@
     <main>
       <h1 class="profile">Thông tin khách hàng</h1>
       <div class="profile-card">
-         <div class="image-container">
-            <img src="/furniture-shop/public/assets/images/news2.jpg" alt="" >
-         </div>
+        <div class="image-container">
+          <img src="/assets/images/user_avatar.jpg" alt="user avatar">
+        </div>
 
-         <div class="main-container">
-          <h2>Nguyễn Văn A</h2>
+        <div class="main-container">
+          <h2 class="fullname">Nguyễn Văn A</h2>
           <p><i class="fa fa-home info"></i>Ninh Kiều, TP.Cần Thơ</p>
           <p><i class="fa fa-envelope info"></i>123@gmail.com</p>
           <p><i class="fa fa-phone info"></i>0123456789</p>
-         </div>
+        </div>
+
+        <hr style="width: 80%; background-color: black; height: 2px; margin: 0 auto;" />
+
+        <div class="password-box">
+          <h3>Đổi mật khẩu</h3>
+
+          <form>
+            <div class="mb-3">
+              <label for="pass1" class="form-label">Nhập mật khẩu cũ</label>
+              <input type="password" class="form-control" id="pass1">
+            </div>
+
+            <div class="mb-3">
+              <label for="pass2" class="form-label">Nhập mật khẩu mới</label>
+              <input type="password" class="form-control" id="pass2">
+            </div>
+
+            <div class="mb-3">
+              <label for="pass3" class="form-label">Nhập lại mật khẩu mới</label>
+              <input type="password" class="form-control" id="pass3">
+            </div>
+            <button type="button" class="btn btn-info">Lưu</button>
+          </form>
+        </div>
       </div>
     </main>
 

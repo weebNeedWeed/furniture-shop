@@ -49,7 +49,6 @@ main h3 {
 	display: flex;
 	flex-direction: column;
 }
-
 input {
 	margin-bottom: 12px;
   background-image: linear-gradient(to right, #1b4c6d, #062f4d);

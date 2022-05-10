@@ -136,6 +136,13 @@ function createCard(item_name) {
 	card_image.className = "item-image";
 	card_image.style.backgroundImage = `url('${shopItem.image}')`;
 
+	const cardInfo = document.createElement("div");
+	cardInfo.className = "card-info";
+	cardInfo.innerHTML = `
+    <h5>${shopItem.vietnameseName}</h5>
+    <p><span>${shopItem.price}</span> VND</p>
+  `;
+
 	let card_buttons = document.createElement("div");
 	card_buttons.className = "item-buttons";
 
@@ -160,8 +167,9 @@ function createCard(item_name) {
 			textureButtonWrapper.className = "texture-buttons";
 
 			const uploadButton = document.createElement("button");
-			uploadButton.innerHTML = '<i class="fa fa-upload"></i>';
+			uploadButton.innerHTML = "Xem";
 			uploadButton.onclick = () => {
+				window.scrollTo(0, 0);
 				loadModel(shopItem.modelFolder, shopItem.config, color);
 			};
 
@@ -172,17 +180,14 @@ function createCard(item_name) {
 			textureWrapper.appendChild(newTextureCard);
 		});
 
+		window.scrollTo(0, 0);
+
 		loadModel(shopItem.modelFolder, shopItem.config, shopItem.texture[0]);
 
 		// load product's info
 		document.getElementById("product-name").innerText = shopItem.vietnameseName;
 		document.getElementById("product-price").innerText = shopItem.price;
 		document.getElementById("product-des").innerText = shopItem.description;
-
-		// handle user click btn in infobox
-		document.getElementById("info-box-btn").onclick = () => {
-			console.log(shopItem.name);
-		};
 	};
 
 	let add_cart_button = document.createElement("button");
@@ -192,17 +197,22 @@ function createCard(item_name) {
 	};
 
 	// Card Buttons' Icon
-	let upload_button_icon = document.createElement("i");
-	upload_button_icon.className = "fa fa-upload";
+	// let upload_button_icon = document.createElement("i");
+	// upload_button_icon.className = "fa fa-upload";
 
-	let add_cart_button_icon = document.createElement("i");
-	add_cart_button_icon.className = "fa fa-cart-plus";
+	// let add_cart_button_icon = document.createElement("i");
+	// add_cart_button_icon.className = "fa fa-cart-plus";
 
-	upload_button.appendChild(upload_button_icon);
-	add_cart_button.appendChild(add_cart_button_icon);
+	// upload_button.appendChild(upload_button_icon);
+	// add_cart_button.appendChild(add_cart_button_icon);
+
+	upload_button.innerHTML = "Xem";
+	add_cart_button.innerHTML = "Mua";
+
 	card_buttons.appendChild(upload_button);
 	card_buttons.appendChild(add_cart_button);
 	card.appendChild(card_image);
+	card.appendChild(cardInfo);
 	card.appendChild(card_buttons);
 
 	return card;
@@ -255,7 +265,7 @@ searchInput.onkeyup = debounce(() => {
 	const value = searchInput.value;
 
 	const filteredShopItems = SHOPITEMS.filter((elm) =>
-		elm.name.toLowerCase().includes(value.toLowerCase()),
+		elm.vietnameseName.toLowerCase().includes(value.toLowerCase()),
 	);
 
 	item_list.innerHTML = "";

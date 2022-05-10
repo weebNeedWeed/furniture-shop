@@ -40,7 +40,7 @@ function loadModel(path, config, backgroundColor) {
 	const controls = new THREE.OrbitControls(camera, renderer.domElement);
 	controls.autoRotate = true;
 	controls.enablePan = false;
-	controls.enableDamping = true;
+	controls.enableDamping = false;
 	controls.mouseButtons = {
 		MIDDLE: THREE.MOUSE.DOLLY,
 		LEFT: THREE.MOUSE.ROTATE,

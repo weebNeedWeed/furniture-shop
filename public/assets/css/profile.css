@@ -1,42 +1,67 @@
-body{
-    font-family: sans-serif;
-    color: #3c3939;
+body {
+	font-family: sans-serif;
+	color: #3c3939;
 }
 
-.profile{
+.profile {
 	max-width: 1200px;
 	margin: 0 auto;
-    color: #C2C2C4;
-    padding: 20px;
-    text-align: center;
+	color: #c2c2c4;
+	padding: 20px;
+	text-align: center;
 }
 
-.profile-card{
-    width: 550px;
-    margin: auto;
-    background: whitesmoke;
-    box-shadow: 0 4px 10px 0 rgba(255,255,255,0.6);
-    border-radius: 6px;
-    position: relative;
+.profile-card {
+	width: 550px;
+	margin: auto;
+	background: whitesmoke;
+	box-shadow: 0 4px 10px 0 rgba(255, 255, 255, 0.6);
+	border-radius: 6px;
+	position: relative;
 }
 
-.image-container{
-    position: relative;
-    transform: translateX(22.5%);
+.image-container {
+	position: relative;
+	text-align: center;
 }
 
-img{
-    border-radius: 50%;
-    padding: 20px;
-    height: 300px;
-    width: 300px;
+img {
+	border-radius: 50%;
+	padding: 20px;
+	height: 300px;
+	width: 300px;
 }
 
-.info{
-    color: #4b4fe2;
-    margin-right: 16px;
+.info {
+	color: #4b4fe2;
+	margin-right: 16px;
 }
 
-.main-container{
-    padding: 40px;
+.main-container {
+	padding: 40px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.fullname {
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+.password-box {
+	padding: 0 40px;
+	padding-bottom: 40px;
+	margin-top: 30px;
+}
+
+@media only screen and (max-width: 800px) {
+	.profile-card {
+		width: 90%;
+	}
+
+	img {
+		width: 200px;
+		height: 200px;
+	}
 }

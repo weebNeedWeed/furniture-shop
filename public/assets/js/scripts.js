@@ -24,7 +24,7 @@ const debounce = function (fn, time = 300) {
 const SHOPITEMS = [
 	{
 		name: "Sofa",
-		price: 20,
+		price: 2000000,
 		description:
 			"Ghế sofa, sô pha, ghế dài hay trường kỷ là một món đồ nội thất dành cho hai hay nhiều người cùng ngồi một lúc. Ghế gồm có phần mặt ngồi, tay vịn, tựa lưng được bọc một phần hoặc toàn bộ bằng da hay vải, dưới chỗ ngồi có lò xo và đệm.Do ghế này dài nên ngoài công năng chủ yếu để ngồi thì còn có thể dùng để nằm ngủ.",
 		vietnameseName: "Sofa",
@@ -51,7 +51,7 @@ const SHOPITEMS = [
 	},
 	{
 		name: "Office chair",
-		price: 30,
+		price: 500000,
 		description:
 			"Ghế văn phòng là loại ghế được thiết kế chủ yếu để ngồi làm việc tại các bàn, phòng chốn công sở. Ngoài mục đích để ngồi, sản phẩm còn có cấu tạo phù hợp với thể trạng và môi trường của người dùng. Các bạn cũng có thể dễ dàng kết hợp với những chiếc bàn xếp bàn gấp tại văn phòng để làm “cặp đôi” tiện lợi cho không gian văn phòng của bạn, vừa tiết kiệm không gian và đáp ứng nhu cầu nghỉ ngơi thư giãn một cách tiện lợi.",
 		vietnameseName: "Ghế văn phòng",
@@ -78,7 +78,7 @@ const SHOPITEMS = [
 	},
 	{
 		name: "Computer table",
-		price: 30,
+		price: 699000,
 		description:
 			"Bàn làm việc phù hợp nhiều mục đích sử dụng. Chất lượng tốt. Giá mềm.",
 		vietnameseName: "Bàn làm việc",

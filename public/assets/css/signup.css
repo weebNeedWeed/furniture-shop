@@ -22,19 +22,24 @@ main h3 {
 .form-container .form-signup {
 	display: flex;
 	flex-direction: column;
-	border: 2px solid #c2c2c4;
+	border: 3px solid #c2c2c4;
 	border-radius: 20px;
 	border-image: linear-gradient(
 		45deg,
 		var(--blue),
 		var(--dark),
-		var(--silver1, var(--silver2), var(--silver3))
+		var(--silver1),
+		var(--silver2),
+		var(--silver3),
+		var(--dark),
+		var(--blue)
 	);
 	border-image-slice: 1;
 	width: 520px;
 	height: 410px;
 	padding: 20px 15px;
 	margin-top: 50px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .user {
@@ -51,13 +56,13 @@ main h3 {
 }
 
 input {
-  margin-bottom: 12px;
-  background-image: linear-gradient(to right, #1b4c6d, #062f4d);
-  border-radius: 4px;
-  border: 2px solid #c2c2c4;
-  color: #c2c2c4;
-  height: 40px;
-  width: 205px;
+	margin-bottom: 12px;
+	background-image: linear-gradient(to right, #1b4c6d, #062f4d);
+	border-radius: 4px;
+	border: 2px solid #c2c2c4;
+	color: #c2c2c4;
+	height: 40px;
+	width: 205px;
 }
 
 ::placeholder {

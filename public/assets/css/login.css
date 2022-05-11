@@ -27,12 +27,12 @@ main h3 {
 	flex-direction: column;
 	border: 2px solid #c2c2c4;
 	border-radius: 20px;
-	/* border-image: linear-gradient(
+	border-image: linear-gradient(
 		45deg,
 		var(--blue),
 		var(--dark),
 		var(--silver1, var(--silver2), var(--silver3))
-	); */
+	);
 	border-image-slice: 1;
 	width: 520px;
 	padding: 20px 15px;
@@ -134,7 +134,8 @@ p {
 	}
 }
 
-.modal-h4, .modal-h4 {
+.modal-h4,
+.modal-h4 {
 	font-weight: bold;
 	color: var(--silver3);
 }

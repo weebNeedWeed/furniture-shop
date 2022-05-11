@@ -25,19 +25,24 @@ main h3 {
 .form-container .form-signup {
 	display: flex;
 	flex-direction: column;
-	border: 2px solid #c2c2c4;
+	border: 3px solid #c2c2c4;
 	border-radius: 20px;
-	/* border-image: linear-gradient(
+	border-image: linear-gradient(
 		45deg,
 		var(--blue),
 		var(--dark),
-		var(--silver1, var(--silver2), var(--silver3))
-	); */
+		var(--silver1),
+		var(--silver2),
+		var(--silver3),
+		var(--dark),
+		var(--blue)
+	);
 	border-image-slice: 1;
 	width: 520px;
 	padding: 20px 15px;
 	margin-top: 50px;
 	padding-bottom: 40px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .user {
@@ -134,7 +139,8 @@ p {
 	}
 }
 
-.modal-h4, .modal-h4 {
+.modal-h4,
+.modal-h4 {
 	font-weight: bold;
 	color: var(--silver3);
 }

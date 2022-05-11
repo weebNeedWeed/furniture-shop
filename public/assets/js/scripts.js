@@ -108,3 +108,8 @@ const SHOPITEMS = [
 SHOPITEMS.forEach(
 	(elm) => (elm.texture = [0xa5d4dc, 0xf7f7f7, 0xebd2d1, 0xcaabbf]),
 );
+
+// Add favicon to <head>
+$("head").append(`
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+`);

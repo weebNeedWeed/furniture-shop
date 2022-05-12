@@ -1,0 +1,11 @@
+Model Information:
+* title:	Clock ornament
+* source:	https://sketchfab.com/3d-models/clock-ornament-fa349d5a9603451e9552ed0e126754ce
+* author:	GrumpyAuldGit (https://sketchfab.com/GrumpyAuldGit)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Clock ornament" (https://sketchfab.com/3d-models/clock-ornament-fa349d5a9603451e9552ed0e126754ce) by GrumpyAuldGit (https://sketchfab.com/GrumpyAuldGit) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

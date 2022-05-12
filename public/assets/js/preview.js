@@ -1,6 +1,11 @@
 item_list = document.getElementById("list");
 localStorage.clear();
 
+// reload page when window is resized
+window.onresize = debounce(() => {
+	location.reload();
+}, 1000);
+
 function setLoadingStatus(status) {
 	if (status === "show") {
 		$("#scene-container").html(`<div id="loading">
@@ -40,7 +45,7 @@ function loadModel(path, config, backgroundColor) {
 	const controls = new THREE.OrbitControls(camera, renderer.domElement);
 	controls.autoRotate = true;
 	controls.enablePan = false;
-	controls.enableDamping = false;
+	controls.enableDamping = true;
 	controls.mouseButtons = {
 		MIDDLE: THREE.MOUSE.DOLLY,
 		LEFT: THREE.MOUSE.ROTATE,
@@ -221,14 +226,15 @@ function createCard(item_name) {
 }
 
 // item_list.appendChild(createCard("Sofa"));
-SHOPITEMS.forEach((item) => {
+
+// Load all items in SHOPITEMS with index 0 => (itemPerPage - 1)
+const itemPerPage = 6;
+SHOPITEMS.slice(0, 6).forEach((item) => {
 	item_list.appendChild(createCard(item.name));
 });
 
 // Generate page number;
 const generatePageNumber = (itemsArray) => {
-	const itemPerPage = 6;
-
 	const itemCount = itemsArray.length;
 	const pageCount = Math.ceil(itemCount / itemPerPage);
 
@@ -239,6 +245,11 @@ const generatePageNumber = (itemsArray) => {
 	for (let index = 0; index < pageCount; ++index) {
 		const button = document.createElement("button");
 		button.innerText = index + 1;
+
+		// Check if button is the first one, add class "active" to it
+		if (index === 0) {
+			button.className = "active";
+		}
 
 		button.onclick = () => {
 			let from = index * itemPerPage;
@@ -253,6 +264,12 @@ const generatePageNumber = (itemsArray) => {
 			for (let index = from; index <= to; ++index) {
 				item_list.appendChild(createCard(SHOPITEMS[index].name));
 			}
+
+			// Remove class "active" from all buttons
+			$("#page-number button").removeClass("active");
+
+			// Add class "active" to current button
+			button.className = "active";
 		};
 
 		pageNumberBox.appendChild(button);

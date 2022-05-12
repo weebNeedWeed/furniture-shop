@@ -103,6 +103,10 @@
 	border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
+#page-number button.active {
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
 #search-form {
 	border: 2px solid #c2c2c4;
 	/* border-radius: 4px; */
@@ -260,6 +264,7 @@
 
 .card-info h5 {
 	font-size: calc(1vw + 1vh + 5px);
+	height: calc(2vw + 2vh + 40px);
 }
 
 /* Ads */

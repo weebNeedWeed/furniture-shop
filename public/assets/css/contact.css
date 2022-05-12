@@ -25,12 +25,12 @@
 .contact-us .content h2{
     font-size: 36px;
     font-weight: bold;
-    color: var(--silver3);
+    color: var(--silver1);
 }
 
 .contact-us .content p{
     font-weight: bold;
-    color: var(--silver3);
+    color: var(--silver1);
     font-size: large;
 }
 
@@ -69,14 +69,14 @@
     display: flex;
     margin-left: 20px;
     font-size: 16px;
-    color: var(--silver3);
+    color: #efeff5e5;
     font-weight: bold;
     flex-direction: column;
     justify-content: center;
 }
 
 .box .text h3 {
-    color: var(--silver1);
+    color: #efeff5e5;
 }
 
 .contact-form {
@@ -87,7 +87,7 @@
 
 .contact-form h2{
     font-size: 30px;
-    color: var(--silver3);
+    color: var(--silver1);
     font-weight: 400;
     margin-bottom: 20px;
 }
@@ -112,20 +112,10 @@
     height: 80px;
 }
 
-.contact-form .input-box span {
-    position: absolute;
-    left: 0;
-    padding: 5px 3px;
-    margin: 2px 5px;
-    transition: 0.3s;
-    opacity: 1;
-}
-
-.contact-form .input-box input:focus ~ span, 
-.contact-form .input-box input:valid ~ span,
-.contact-form .input-box textarea:focus ~ span,
-.contact-form .input-box textarea:valid ~ span  {
-    opacity: 0;
+.contact-form .input-box input::placeholder, .contact-form .input-box textarea::placeholder {
+    margin-left: 10px;
+    padding-left: 10px;
+    color: var(--silver1);
 }
 
 

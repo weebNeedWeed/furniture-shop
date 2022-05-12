@@ -39,7 +39,7 @@ footerTemplate.innerHTML = `
             <div class="col-md-3 col-sm-12">
               <ul class="footer-nav">
                 <li class="footer-nav__item">
-                  <a href="./contact.html" class="footer-nav__link">Liên hệ</a>
+                  <a href="/contact.html" class="footer-nav__link">Liên hệ</a>
                 </li>
               </ul>
             </div>

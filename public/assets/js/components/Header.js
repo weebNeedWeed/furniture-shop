@@ -31,6 +31,9 @@ headerTemplate.innerHTML = `
             <li class="nav-item">
               <a class="nav-link" href="./cart.html">Giỏ hàng</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Liên hệ</a>
+            </li>
           </ul>
           <div class="d-flex nav-bar-buttons">
             <a href="./login.html"><i class="fa fa-key"></i> Đăng nhập</a>

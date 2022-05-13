@@ -197,9 +197,20 @@ function createCard(item_name) {
 	};
 
 	let add_cart_button = document.createElement("button");
-	add_cart_button.onclick = function add_cart(event) {
+	add_cart_button.onclick = function add_cart() {
+		if (localStorage.getItem(item_name)) {
+			$("#modal-body").text("Sản phẩm hiện đã có trong giỏ hàng.");
+
+			$("#exampleModal").modal("show");
+
+			return;
+		}
+
+		$("#modal-body").text("Thêm vào giỏ hàng thành công.");
+
+		$("#exampleModal").modal("show");
+
 		localStorage.setItem(item_name, 1);
-		// console.log("Set Item " + item_name);
 	};
 
 	// Card Buttons' Icon

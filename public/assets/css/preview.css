@@ -405,8 +405,11 @@ body {
 		height: 200px;
 	}
 
-	.item-buttons > *,
 	.texture-buttons > * {
 		font-size: 12px;
+	}
+
+	.item-buttons > * {
+		font-size: 20px;
 	}
 }

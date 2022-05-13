@@ -1,5 +1,24 @@
-let amounts = document.getElementsByClassName("amounts")[0];
+const amounts = document.getElementsByClassName("amounts")[0];
+const amount_items = document.getElementsByClassName("amount-items")[0];
+const amount_inputs = document.getElementsByClassName('amount-input');
 var sum = 0;
+
+function checkValidAmount(element) {
+	if (element.value < 1 || element.value == ' ') {
+		element.value = 1;
+	}
+}
+
+function removeItem(item_id) {
+	let products = document.getElementsByClassName("products")[0];
+	Array.from(amount_inputs).forEach(element => {
+		if (element.id == item_id) {
+			products.removeChild(element.parentElement.parentElement.parentElement);
+			localStorage.removeItem(item_id.replace(/-/g, ' '));
+			calculateInfo();
+		}
+	});
+}
 
 function createItem(item_name) {
 	let shopItem = SHOPITEMS.find((elm) => elm.name === item_name);
@@ -24,10 +43,15 @@ function createItem(item_name) {
 
 	let product_quantity = document.createElement("p");
 	product_quantity.className = "product-quantity";
-	product_quantity.innerHTML = 'Số lượng: <input value="1">';
+	product_quantity.innerHTML = `Số lượng: <input min=\"1\" type=\"number\"  id=${item_name.replace(/\s/g, '-')} class=\"amount-input\" value=\"1\">`;
+	let _input = product_quantity.getElementsByTagName('input')[0];
+	_input.addEventListener('input', function() {
+		checkValidAmount(_input);
+	});
 
 	let product_remove = document.createElement("p");
 	product_remove.className = "product-remove";
+	product_remove.onclick = function() { removeItem(item_name.replace(/\s/g, '-')) };
 
 	let product_remove_icon = document.createElement("i");
 	product_remove_icon.className = "fa fa-trash";
@@ -52,7 +76,6 @@ function createItem(item_name) {
 
 const loadCart = () => {
 	let products = document.getElementsByClassName("products")[0];
-	let amount_items = document.getElementsByClassName("amount-items")[0];
 	amount_items.innerHTML = localStorage.length;
 
 	products.innerHTML = "";
@@ -89,3 +112,24 @@ document.getElementById("thanhtoan").onclick = () => {
 	$("#modal-body").text("Giỏ hàng đang trống");
 	$("#exampleModal").modal("show");
 };
+
+function calculateInfo() {
+	sum = 0;
+	var n_items = 0;
+
+	Array.from(amount_inputs).forEach(element => {
+		var item_name = element.id.replace(/-/g, ' ');
+		let shopItem = SHOPITEMS.find((elm) => elm.name === item_name);
+
+		n_items += parseInt(element.value);
+		sum += element.value * shopItem.price;
+	});
+	amount_items.innerHTML = n_items;
+	amounts.innerHTML = `${formatVND(sum)} VND`;
+}
+
+Array.from(amount_inputs).forEach(element => {
+	element.addEventListener("input", debounce(() => {
+		calculateInfo();
+	}));
+})

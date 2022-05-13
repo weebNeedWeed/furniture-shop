@@ -1,5 +1,6 @@
-let amounts = document.getElementsByClassName("amounts")[0];
-let amount_items = document.getElementsByClassName("amount-items")[0];
+const amounts = document.getElementsByClassName("amounts")[0];
+const amount_items = document.getElementsByClassName("amount-items")[0];
+const amount_inputs = document.getElementsByClassName('amount-input');
 var sum = 0;
 
 function setOldValue(element) {
@@ -94,16 +95,25 @@ document.getElementById("thanhtoan").onclick = () => {
 	$("#exampleModal").modal("show");
 };
 
-const amount_inputs = document.getElementsByClassName('amount-input');
-Array.from(amount_inputs).forEach(element => {
-	element.addEventListener("input", function (e) {
-		var item_name = this.id.replace(/-/g, ' ');
-		let shopItem = SHOPITEMS.find((elm) => elm.name === item_name);
-		var change_amount = this.value - this.name;
+function calculateInfo() {
+	sum = 0;
+	var n_items = 0;
 
-		if (change_amount != 0);
-			sum += change_amount * shopItem.price;
-			amount_items.innerHTML = parseInt(amount_items.innerHTML) + change_amount;
-			amounts.innerHTML = `${formatVND(sum)} VND`;
+	Array.from(amount_inputs).forEach(element => {
+		var item_name = element.id.replace(/-/g, ' ');
+		let shopItem = SHOPITEMS.find((elm) => elm.name === item_name);
+
+		n_items += parseInt(element.value);
+		sum += element.value * shopItem.price;
+		// console.log(sum);
+		// console.log(n_items);
 	});
-});
+	amount_items.innerHTML = n_items;
+	amounts.innerHTML = `${formatVND(sum)} VND`;
+}
+
+Array.from(amount_inputs).forEach(element => {
+	element.addEventListener("input", debounce(() => {
+		calculateInfo();
+	}));
+})

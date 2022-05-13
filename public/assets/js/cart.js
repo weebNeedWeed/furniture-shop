@@ -2,6 +2,18 @@ let amounts = document.getElementsByClassName("amounts")[0];
 let amount_items = document.getElementsByClassName("amount-items")[0];
 var sum = 0;
 
+const debounce = function (fn, time = 300) {
+	let timer;
+
+	return (...args) => {
+		clearTimeout(timer);
+
+		timer = setTimeout(() => {
+			fn.apply(this, args);
+		}, time);
+	};
+};
+
 function setOldValue(element) {
 	element.setAttribute("name", element.value);
 }
@@ -100,8 +112,10 @@ Array.from(amount_inputs).forEach(element => {
 		var item_name = this.id.replace(/-/g, ' ');
 		let shopItem = SHOPITEMS.find((elm) => elm.name === item_name);
 		var change_amount = this.value - this.name;
-		sum += change_amount * shopItem.price;
-		amount_items.innerHTML = parseInt(amount_items.innerHTML) + change_amount;
-		amounts.innerHTML = `${formatVND(sum)} VND`;
+
+		if (change_amount != 0);
+			sum += change_amount * shopItem.price;
+			amount_items.innerHTML = parseInt(amount_items.innerHTML) + change_amount;
+			amounts.innerHTML = `${formatVND(sum)} VND`;
 	});
 });

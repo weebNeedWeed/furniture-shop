@@ -33,12 +33,12 @@ const formatVND = (number) => {
 const SHOPITEMS = [
 	{
 		name: "Sofa",
-		price: 2000000,
+		price: 6500000,
 		description:
-			"Ghế sofa, sô pha, ghế dài hay trường kỷ là một món đồ nội thất dành cho hai hay nhiều người cùng ngồi một lúc. Ghế gồm có phần mặt ngồi, tay vịn, tựa lưng được bọc một phần hoặc toàn bộ bằng da hay vải, dưới chỗ ngồi có lò xo và đệm.Do ghế này dài nên ngoài công năng chủ yếu để ngồi thì còn có thể dùng để nằm ngủ.",
+			"Ghế sofa, sô pha, ghế dài hay trường kỷ là một món đồ nội thất dành cho hai hay nhiều người cùng ngồi một lúc. Ghế gồm có phần mặt ngồi, tay vịn, tựa lưng được bọc một phần hoặc toàn bộ bằng da hay vải, dưới chỗ ngồi có lò xo và đệm. Do ghế này dài nên ngoài chức năng chủ yếu để ngồi thì còn có thể dùng để nằm ngủ.",
 		vietnameseName: "Sofa",
-		modelFolder: "/assets/models/sofa",
-		image: "/assets/images/models/sofa.PNG",
+		modelFolder: "./assets/models/sofa",
+		image: "./assets/images/models/sofa.PNG",
 		config: {
 			target: {
 				x: 0,
@@ -64,8 +64,8 @@ const SHOPITEMS = [
 		description:
 			"Ghế văn phòng là loại ghế được thiết kế chủ yếu để ngồi làm việc tại các bàn, phòng chốn công sở. Ngoài mục đích để ngồi, sản phẩm còn có cấu tạo phù hợp với thể trạng và môi trường của người dùng. Các bạn cũng có thể dễ dàng kết hợp với những chiếc bàn xếp bàn gấp tại văn phòng để làm “cặp đôi” tiện lợi cho không gian văn phòng của bạn, vừa tiết kiệm không gian và đáp ứng nhu cầu nghỉ ngơi thư giãn một cách tiện lợi.",
 		vietnameseName: "Ghế văn phòng",
-		modelFolder: "/assets/models/office_chair",
-		image: "/assets/images/models/office_chair.PNG",
+		modelFolder: "./assets/models/office_chair",
+		image: "./assets/images/models/office_chair.PNG",
 		config: {
 			target: {
 				x: 0,
@@ -89,10 +89,10 @@ const SHOPITEMS = [
 		name: "Computer table",
 		price: 699000,
 		description:
-			"Bàn làm việc phù hợp nhiều mục đích sử dụng. Chất lượng tốt. Giá mềm.",
+			"Bàn làm việc phù hợp nhiều mục đích sử dụng. Chất lượng tốt. Giá ưu đãi.",
 		vietnameseName: "Bàn làm việc",
-		modelFolder: "/assets/models/computer_table",
-		image: "/assets/images/models/computer_table.PNG",
+		modelFolder: "./assets/models/computer_table",
+		image: "./assets/images/models/computer_table.PNG",
 		config: {
 			target: {
 				x: 0,
@@ -116,10 +116,10 @@ const SHOPITEMS = [
 		name: "Gramophone",
 		price: 1900000,
 		description:
-			"Máy hát hay còn gọi là máy hát đĩa hoặc kèn hát, mà từ thập niên 1980 tiến triển thành máy quay đĩa được dùng trong giới DJ xoay bàn đĩa, là một thiết bị cơ học chuyên dùng để thu âm và tái tạo âm thanh. Máy hát do nhà bác học Thô-mát Ê-đi-xơn người Mỹ phát minh vào năm 1877.",
+			"Máy hát hay còn gọi là máy hát đĩa hoặc kèn hát, mà từ thập niên 1980 tiến triển thành máy quay đĩa được dùng trong giới DJ xoay bàn đĩa, là một thiết bị cơ học chuyên dùng để thu âm và tái tạo âm thanh. Máy hát do nhà bác học Thomas Edison người Mỹ phát minh vào năm 1877.",
 		vietnameseName: "Máy hát đĩa kiểu cổ",
-		modelFolder: "/assets/models/gramophone",
-		image: "/assets/images/models/gramophone.PNG",
+		modelFolder: "./assets/models/gramophone",
+		image: "./assets/images/models/gramophone.PNG",
 		config: {
 			target: {
 				x: 0,
@@ -143,10 +143,10 @@ const SHOPITEMS = [
 		name: "Classic plastic chairs",
 		price: 199000,
 		description:
-			"Ghế nhựa từ lâu là một vật dụng phổ biến tại Việt Nam. Mua ngay bộ 4 giá ghế nhựa có tựa lưng giá rẻ tại NVM.",
+			"Ghế nhựa từ lâu là một vật dụng phổ biến tại Việt Nam. Mua ngay bộ 4 ghế nhựa có tựa lưng giá ưu đãi chỉ có tại NVM.",
 		vietnameseName: "Bộ 4 ghế nhựa",
-		modelFolder: "/assets/models/classic_plastic_chairs",
-		image: "/assets/images/models/classic_plastic_chairs.PNG",
+		modelFolder: "./assets/models/classic_plastic_chairs",
+		image: "./assets/images/models/classic_plastic_chairs.PNG",
 		config: {
 			target: {
 				x: 0,
@@ -168,11 +168,11 @@ const SHOPITEMS = [
 	},
 	{
 		name: "Dining table glass",
-		price: 699000,
-		description: "Bàn ăn mặt kính kèm 6 ghế giá mềm chỉ có tại NVM.",
-		vietnameseName: "Bộ bàn ăn (1 bàn, 6 ghế) giá rẻ",
-		modelFolder: "/assets/models/dining_table_glass",
-		image: "/assets/images/models/dining_table_glass.PNG",
+		price: 10000000,
+		description: "Bàn ăn mặt kính kèm 6 ghế giá ưu đãi chỉ có tại NVM.",
+		vietnameseName: "Bộ bàn ăn (1 bàn, 6 ghế)",
+		modelFolder: "./assets/models/dining_table_glass",
+		image: "./assets/images/models/dining_table_glass.PNG",
 		config: {
 			target: {
 				x: 0,
@@ -195,10 +195,10 @@ const SHOPITEMS = [
 	{
 		name: "Simple dining table",
 		price: 525000,
-		description: "Bàn ăn nhựa sang trọng 4 ghế giá rẻ chỉ có tại NVM.",
+		description: "Bàn ăn nhựa sang trọng 4 ghế giá ưu đãi chỉ có tại NVM.",
 		vietnameseName: "Bộ bàn ăn nhựa(1 bàn, 4 ghế)",
-		modelFolder: "/assets/models/simple_dining_table",
-		image: "/assets/images/models/simple_dining_table.PNG",
+		modelFolder: "./assets/models/simple_dining_table",
+		image: "./assets/images/models/simple_dining_table.PNG",
 		config: {
 			target: {
 				x: 0,
@@ -220,12 +220,12 @@ const SHOPITEMS = [
 	},
 	{
 		name: "Chair",
-		price: 199000,
+		price: 250000,
 		description:
 			"Ghế nhựa có tựa lưng và có thể gấp lại giúp tiết kiệm diện tích nhà.",
 		vietnameseName: "Ghế nhựa gấp có tựa lưng",
-		modelFolder: "/assets/models/chair",
-		image: "/assets/images/models/chair.PNG",
+		modelFolder: "./assets/models/chair",
+		image: "./assets/images/models/chair.PNG",
 		config: {
 			target: {
 				x: 0,
@@ -247,12 +247,12 @@ const SHOPITEMS = [
 	},
 	{
 		name: "Office chair 2",
-		price: 380000,
+		price: 480000,
 		description:
 			"Ghế dựa có phần đệm mềm thoáng khí tốt và giá cả phải chăng. Chỉ có tại NVM!",
 		vietnameseName: "Ghế văn phòng đệm có tựa lưng",
-		modelFolder: "/assets/models/office_chair2",
-		image: "/assets/images/models/office_chair2.PNG",
+		modelFolder: "./assets/models/office_chair2",
+		image: "./assets/images/models/office_chair2.PNG",
 		config: {
 			target: {
 				x: 0,
@@ -274,11 +274,11 @@ const SHOPITEMS = [
 	},
 	{
 		name: "Dining set",
-		price: 830000,
-		description: "Bộ bàn ghế(ăn) gồm 1 bàn và 4 ghế mẫu mã đẹp, chất lượng cao",
+		price: 3500000,
+		description: "Bộ bàn ghế(ăn) gồm 1 bàn và 4 ghế mẫu mã đẹp, chất lượng cao.",
 		vietnameseName: "Bộ bàn ăn kiểu dáng đẹp",
-		modelFolder: "/assets/models/dining_set",
-		image: "/assets/images/models/dining_set.PNG",
+		modelFolder: "./assets/models/dining_set",
+		image: "./assets/images/models/dining_set.PNG",
 		config: {
 			target: {
 				x: 0,
@@ -300,12 +300,12 @@ const SHOPITEMS = [
 	},
 	{
 		name: "Analog clock",
-		price: 91000,
+		price: 149000,
 		description:
-			"Đồng hồ treo tường chính hãng, giá cả phải chăng, mua ngay kẻo lỡ",
+			"Đồng hồ treo tường chính hãng, giá cả phải chăng, mua ngay kẻo lỡ.",
 		vietnameseName: "Đồng hồ treo tường",
-		modelFolder: "/assets/models/analog_clock",
-		image: "/assets/images/models/analog_clock.PNG",
+		modelFolder: "./assets/models/analog_clock",
+		image: "./assets/images/models/analog_clock.PNG",
 		config: {
 			target: {
 				x: 0,
@@ -329,10 +329,10 @@ const SHOPITEMS = [
 		name: "Ornament clock",
 		price: 250000,
 		description:
-			"Nếu bạn cảm thấy bàn làm việc hoặc bàn học quá trống rỗng, không được đẹp mắt. Còn chờ gì nữa mà không mua ngay một chiếc đồng hồ để bàn tại NVM phục vụ mục đích trang trí và quản lý thời gian.",
+			"Nếu bạn cảm thấy bàn làm việc hoặc bàn học quá trống trải, không được đẹp mắt. Còn chần chờ gì nữa mà không nhanh tay đặt mua ngay một chiếc đồng hồ để bàn tại NVM phục vụ mục đích trang trí và quản lý thời gian.",
 		vietnameseName: "Đồng hồ trang trí(để bàn)",
-		modelFolder: "/assets/models/clock_ornament",
-		image: "/assets/images/models/clock_ornament.PNG",
+		modelFolder: "./assets/models/clock_ornament",
+		image: "./assets/images/models/clock_ornament.PNG",
 		config: {
 			target: {
 				x: 0,
@@ -355,10 +355,10 @@ const SHOPITEMS = [
 	{
 		name: "Table lamp",
 		price: 130000,
-		description: "Đèn để bàn cam kết giá chất lượng, giá rẻ chỉ có tại NVM",
+		description: "Đèn để bàn cam kết chất lượng, giá ưu đãi chỉ có tại NVM",
 		vietnameseName: "Đèn để bàn",
-		modelFolder: "/assets/models/table_lamp",
-		image: "/assets/images/models/table_lamp.PNG",
+		modelFolder: "./assets/models/table_lamp",
+		image: "./assets/images/models/table_lamp.PNG",
 		config: {
 			target: {
 				x: 0,
@@ -386,5 +386,5 @@ SHOPITEMS.forEach(
 
 // Add favicon to <head>
 $("head").append(`
-  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link rel="icon" type="image/png" href="./assets/images/favicon.png" />
 `);

@@ -14,7 +14,8 @@ function removeItem(item_id) {
 	Array.from(amount_inputs).forEach(element => {
 		if (element.id == item_id) {
 			products.removeChild(element.parentElement.parentElement.parentElement);
-			localStorage.removeItem(item_id.replace(/-/g, ' '))
+			localStorage.removeItem(item_id.replace(/-/g, ' '));
+			calculateInfo();
 		}
 	});
 }
@@ -122,8 +123,6 @@ function calculateInfo() {
 
 		n_items += parseInt(element.value);
 		sum += element.value * shopItem.price;
-		// console.log(sum);
-		// console.log(n_items);
 	});
 	amount_items.innerHTML = n_items;
 	amounts.innerHTML = `${formatVND(sum)} VND`;

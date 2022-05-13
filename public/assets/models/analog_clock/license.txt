@@ -1,0 +1,11 @@
+Model Information:
+* title:	Analog clock
+* source:	https://sketchfab.com/3d-models/analog-clock-e3e8d4afaee14a3bafa5974303c2d582
+* author:	Stormageddon, dark Queen of all (https://sketchfab.com/GeneticDragon)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Analog clock" (https://sketchfab.com/3d-models/analog-clock-e3e8d4afaee14a3bafa5974303c2d582) by Stormageddon, dark Queen of all (https://sketchfab.com/GeneticDragon) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

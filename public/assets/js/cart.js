@@ -7,6 +7,16 @@ function setOldValue(element) {
 	element.setAttribute("name", element.value);
 }
 
+function removeItem(item_id) {
+	let products = document.getElementsByClassName("products")[0];
+	Array.from(amount_inputs).forEach(element => {
+		if (element.id == item_id) {
+			products.removeChild(element.parentElement.parentElement.parentElement);
+			localStorage.removeItem(item_id.replace(/-/g, ' '))
+		}
+	});
+}
+
 function createItem(item_name) {
 	let shopItem = SHOPITEMS.find((elm) => elm.name === item_name);
 
@@ -30,10 +40,11 @@ function createItem(item_name) {
 
 	let product_quantity = document.createElement("p");
 	product_quantity.className = "product-quantity";
-	product_quantity.innerHTML = `Số lượng: <input onFocus=\"setOldValue(this)\" id=${item_name.replace(/\s/g, '-')} class=\"amount-input\" value=\"1\">`;
+	product_quantity.innerHTML = `Số lượng: <input type=\"number\" onFocus=\"setOldValue(this)\" id=${item_name.replace(/\s/g, '-')} class=\"amount-input\" value=\"1\">`;
 
 	let product_remove = document.createElement("p");
 	product_remove.className = "product-remove";
+	product_remove.onclick = function() { removeItem(item_name.replace(/\s/g, '-')) };
 
 	let product_remove_icon = document.createElement("i");
 	product_remove_icon.className = "fa fa-trash";

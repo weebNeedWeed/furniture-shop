@@ -4,7 +4,6 @@ const amount_inputs = document.getElementsByClassName('amount-input');
 var sum = 0;
 
 function checkValidAmount(element) {
-	// console.log(element.value);
 	if (element.value < 1 || element.value == ' ') {
 		element.value = 1;
 	}

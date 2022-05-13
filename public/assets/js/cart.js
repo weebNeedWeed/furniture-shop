@@ -3,8 +3,11 @@ const amount_items = document.getElementsByClassName("amount-items")[0];
 const amount_inputs = document.getElementsByClassName('amount-input');
 var sum = 0;
 
-function setOldValue(element) {
-	element.setAttribute("name", element.value);
+function checkValidAmount(element) {
+	// console.log(element.value);
+	if (element.value < 1 || element.value == ' ') {
+		element.value = 1;
+	}
 }
 
 function removeItem(item_id) {
@@ -40,7 +43,11 @@ function createItem(item_name) {
 
 	let product_quantity = document.createElement("p");
 	product_quantity.className = "product-quantity";
-	product_quantity.innerHTML = `Số lượng: <input type=\"number\" onFocus=\"setOldValue(this)\" id=${item_name.replace(/\s/g, '-')} class=\"amount-input\" value=\"1\">`;
+	product_quantity.innerHTML = `Số lượng: <input min=\"1\" type=\"number\"  id=${item_name.replace(/\s/g, '-')} class=\"amount-input\" value=\"1\">`;
+	let _input = product_quantity.getElementsByTagName('input')[0];
+	_input.addEventListener('input', function() {
+		checkValidAmount(_input);
+	});
 
 	let product_remove = document.createElement("p");
 	product_remove.className = "product-remove";

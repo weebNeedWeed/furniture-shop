@@ -2,18 +2,6 @@ let amounts = document.getElementsByClassName("amounts")[0];
 let amount_items = document.getElementsByClassName("amount-items")[0];
 var sum = 0;
 
-const debounce = function (fn, time = 300) {
-	let timer;
-
-	return (...args) => {
-		clearTimeout(timer);
-
-		timer = setTimeout(() => {
-			fn.apply(this, args);
-		}, time);
-	};
-};
-
 function setOldValue(element) {
 	element.setAttribute("name", element.value);
 }

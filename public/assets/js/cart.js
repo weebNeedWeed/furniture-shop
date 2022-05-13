@@ -1,6 +1,10 @@
 let amounts = document.getElementsByClassName("amounts")[0];
 var sum = 0;
 
+function setOldValue(element) {
+	element.setAttribute("name", element.value);
+}
+
 function createItem(item_name) {
 	let shopItem = SHOPITEMS.find((elm) => elm.name === item_name);
 
@@ -24,7 +28,7 @@ function createItem(item_name) {
 
 	let product_quantity = document.createElement("p");
 	product_quantity.className = "product-quantity";
-	product_quantity.innerHTML = 'Số lượng: <input value="1">';
+	product_quantity.innerHTML = `Số lượng: <input onFocus=\"setOldValue(this)\" id=${item_name.replace(/\s/g, '-')} class=\"amount-input\" value=\"1\">`;
 
 	let product_remove = document.createElement("p");
 	product_remove.className = "product-remove";
@@ -89,3 +93,14 @@ document.getElementById("thanhtoan").onclick = () => {
 	$("#modal-body").text("Giỏ hàng đang trống");
 	$("#exampleModal").modal("show");
 };
+
+const amount_inputs = document.getElementsByClassName('amount-input');
+Array.from(amount_inputs).forEach(element => {
+	element.addEventListener("input", function (e) {
+		var item_name = this.id.replace(/-/g, ' ');
+		let shopItem = SHOPITEMS.find((elm) => elm.name === item_name);
+		var change_amount = (this.value - this.name) * shopItem.price;
+		sum += change_amount;
+		amounts.innerHTML = `${formatVND(sum)} VND`;
+	});
+});

@@ -1,5 +1,4 @@
 item_list = document.getElementById("list");
-localStorage.clear();
 
 // reload page when window is resized
 window.onresize = debounce(() => {

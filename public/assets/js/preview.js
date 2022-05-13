@@ -289,7 +289,7 @@ searchInput.onkeyup = debounce(() => {
 
 	item_list.innerHTML = "";
 
-	filteredShopItems.forEach((item) => {
+	filteredShopItems.slice(0, itemPerPage).forEach((item) => {
 		item_list.appendChild(createCard(item.name));
 	});
 

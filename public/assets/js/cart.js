@@ -1,4 +1,5 @@
 let amounts = document.getElementsByClassName("amounts")[0];
+let amount_items = document.getElementsByClassName("amount-items")[0];
 var sum = 0;
 
 function setOldValue(element) {
@@ -56,7 +57,6 @@ function createItem(item_name) {
 
 const loadCart = () => {
 	let products = document.getElementsByClassName("products")[0];
-	let amount_items = document.getElementsByClassName("amount-items")[0];
 	amount_items.innerHTML = localStorage.length;
 
 	products.innerHTML = "";
@@ -99,8 +99,9 @@ Array.from(amount_inputs).forEach(element => {
 	element.addEventListener("input", function (e) {
 		var item_name = this.id.replace(/-/g, ' ');
 		let shopItem = SHOPITEMS.find((elm) => elm.name === item_name);
-		var change_amount = (this.value - this.name) * shopItem.price;
-		sum += change_amount;
+		var change_amount = this.value - this.name;
+		sum += change_amount * shopItem.price;
+		amount_items.innerHTML = parseInt(amount_items.innerHTML) + change_amount;
 		amounts.innerHTML = `${formatVND(sum)} VND`;
 	});
 });

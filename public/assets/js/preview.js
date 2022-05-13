@@ -262,7 +262,7 @@ const generatePageNumber = (itemsArray) => {
 			item_list.innerHTML = "";
 
 			for (let index = from; index <= to; ++index) {
-				item_list.appendChild(createCard(SHOPITEMS[index].name));
+				item_list.appendChild(createCard(itemsArray[index].name));
 			}
 
 			// Remove class "active" from all buttons
@@ -283,7 +283,7 @@ const searchInput = document.getElementById("search");
 searchInput.onkeyup = debounce(() => {
 	const value = searchInput.value;
 
-	const filteredShopItems = SHOPITEMS.filter((elm) =>
+	const filteredShopItems = [...SHOPITEMS].filter((elm) =>
 		elm.vietnameseName.toLowerCase().includes(value.toLowerCase()),
 	);
 

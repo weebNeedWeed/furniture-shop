@@ -16,66 +16,85 @@
     <header-component></header-component>
 
     <main>
-        <div class="contact-us">
-            <div class="content">
-                <h2>Liên Hệ</h2>
-                <p>Hãy liên hệ với chúng tôi bằng cách điền vào thông tin dưới đây</p>
-            </div>
-            <div class="container-contact">
-                <div class="contact-info">
-                    <div class="box">
-                        <div class="icon">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </div>
-                        <div class="text">
-                            <h3>Địa chỉ</h3>
-                            <p>Ninh Kiều, Cần Thơ</p>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="icon">
-                            <i class="fa-solid fa-phone"></i>
-                        </div>
-                        <div class="text">
-                            <h3>Điện thoại</h3>
-                            <p>(+84)12345678</p>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="icon">
-                            <i class="fa-solid fa-envelope"></i>
-                        </div>
-                        <div class="text">
-                            <h3>Email</h3>
-                            <p>abc@gmail.com</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form action="#">
-                        <h2>Gửi tin nhắn</h2>
-                        <div class="input-box">
-                            <input type="text" placeholder="Họ và Tên" required> 
-                        </div>
-                        <div class="input-box">
-                            <input type="text" placeholder="Email" required>
-                        </div>
-                        <div class="input-box">
-                            <textarea name="" id="" placeholder="Nhập tin nhắn" required ></textarea>
-                        </div>
-                        <div class="input-box">
-                            <input id="submit" type="submit" value="Gửi">
-                        </div>
-                    </form>
-                </div>
-            </div>
+      <div class="contact-us">
+        <div class="content">
+          <h2>Liên Hệ</h2>
+          <p>Hãy liên hệ với chúng tôi bằng cách điền vào thông tin dưới đây</p>
         </div>
+        <div class="container-contact">
+          <div class="contact-info">
+            <div class="box">
+              <div class="icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="text">
+                <h3>Địa chỉ</h3>
+                <p>Ninh Kiều, Cần Thơ</p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="icon">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="text">
+                <h3>Điện thoại</h3>
+                <p>(+84)12345678</p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="text">
+                <h3>Email</h3>
+                <p>abc@gmail.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form id="contactform">
+              <h2>Gửi tin nhắn</h2>
+              <div class="input-box">
+                <input type="text" placeholder="Họ và Tên" required>
+              </div>
+              <div class="input-box">
+                <input type="email" placeholder="Email" required>
+              </div>
+              <div class="input-box">
+                <textarea name="" id="" placeholder="Nhập tin nhắn" required></textarea>
+              </div>
+              <div class="input-box">
+                <input id="submit" type="submit" value="Gửi">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </main>
     <footer-component></footer-component>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel" style="color: black;">Thông báo</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" style="color: black" id="modal-body">
+            Cảm ơn bạn đã gửi tin nhắn, chúng tôi sẽ cố gắng phản hồi bạn sớm nhất có thể.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
     <script src="./assets/lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="./assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/scripts.js"></script>
+    <script src="./assets/js/contact.js"></script>
     <script src="./assets/js/components/Header.js"></script>
     <script src="./assets/js/components/Footer.js"></script>
 
